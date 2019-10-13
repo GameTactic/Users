@@ -1,18 +1,20 @@
 security:
-    # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
+    providers:
+        jwt:
+            lexik_jwt:
+                class: App\Security\Provider\JwtToken
         
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
         main:
-            anonymous: ~
+            anonymous: true
             logout: ~
             stateless: true
-
-#            guard:
-#                authenticators:
-#                    - App\Security\Guard\WargamingAuthenticator
+            guard:
+                authenticators:
+                    - lexik_jwt_authentication.jwt_token_authenticator
                     
 
     access_control:
