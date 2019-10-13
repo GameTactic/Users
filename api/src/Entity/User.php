@@ -15,11 +15,22 @@ namespace App\Entity;
 
 use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * @ORM\Entity
  * @ORM\Table(name="users")
- * @ApiResource()
+ * @ApiResource(
+ *     attributes={"security"="is_granted('IS_AUTHENTICATED_FULLY')"},
+ *     normalizationContext={"groups"={"user_read"}},
+ *     denormalizationContext={"groups"={"user_write"}},
+ *     collectionOperations={
+ *         "get"={},
+ *     },
+ *     itemOperations={
+ *         "get"={},
+ *     },
+ * )
  */
 final class User
 {
@@ -32,16 +43,19 @@ final class User
 
     /**
      * @ORM\Column(type="string")
+     * @Groups({"user_read"})
      */
     private $userId;
 
     /**
      * @ORM\Column(type="string")
+     * @Groups({"user_read"})
      */
     private $username;
 
     /**
      * @ORM\Column(type="string")
+     * @Groups({"user_read"})
      */
     private $region;
 
