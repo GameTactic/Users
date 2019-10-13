@@ -54,8 +54,8 @@ services:
     image: phpmyadmin/phpmyadmin:latest
     environment:
       - PMA_HOST=db
-      - PMA_USER=gt_users
-      - PMA_PASSWORD=please-change-me-asap
+      - PMA_USER=root
+      - PMA_PASSWORD=gametactic
     ports:
       - target: 80
         published: 80
