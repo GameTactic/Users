@@ -41,4 +41,6 @@ COPY api/public public/
 COPY api/src src/
 #COPY api/templates templates/
 
+RUN bin/console assets:install --symlink
+
 EXPOSE 80/tcp
