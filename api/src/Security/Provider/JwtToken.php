@@ -2,11 +2,11 @@
 
 /**
  *
- * GameTactic Users 2019 — NOTICE OF LICENSE
+ * GameTactic Users 2020 — NOTICE OF LICENSE
  *
  * This source file is released under GPLv3 license by copyright holders.
  * Please see LICENSE file for more specific licensing terms.
- * @copyright 2019-2019 (c) GameTactic
+ * @copyright 2019-2020 (c) GameTactic
  * @author Niko Granö <niko@granö.fi>
  *
  */
@@ -41,9 +41,6 @@ final class JwtToken implements JWTUserInterface
      * Creates a new instance from a given JWT payload.
      *
      * @param string $username
-     * @param array  $payload
-     *
-     * @return JWTUserInterface
      */
     public static function createFromPayload($username, array $payload): JWTUserInterface
     {
@@ -115,17 +112,11 @@ final class JwtToken implements JWTUserInterface
         // Do nothing.
     }
 
-    /**
-     * @return string
-     */
     public function getRegion(): string
     {
         return $this->region;
     }
 
-    /**
-     * @return string
-     */
     public function getUid(): string
     {
         return $this->uid;

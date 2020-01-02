@@ -2,11 +2,11 @@
 
 /**
  *
- * GameTactic Users 2019 — NOTICE OF LICENSE
+ * GameTactic Users 2020 — NOTICE OF LICENSE
  *
  * This source file is released under GPLv3 license by copyright holders.
  * Please see LICENSE file for more specific licensing terms.
- * @copyright 2019-2019 (c) GameTactic
+ * @copyright 2019-2020 (c) GameTactic
  * @author Niko Granö <niko@granö.fi>
  *
  */
@@ -61,10 +61,6 @@ final class User
 
     /**
      * User constructor.
-     *
-     * @param string $username
-     * @param string $userId
-     * @param string $region
      */
     public function __construct(string $username, string $userId, string $region)
     {
@@ -73,25 +69,16 @@ final class User
         $this->region = $region;
     }
 
-    /**
-     * @param string $userId
-     */
     public function setUserId(string $userId): void
     {
         $this->userId = $userId;
     }
 
-    /**
-     * @param string $username
-     */
     public function setUsername(string $username): void
     {
         $this->username = $username;
     }
 
-    /**
-     * @param string $region
-     */
     public function setRegion(string $region): void
     {
         if (!\in_array($region, ['eu', 'na', 'asia', 'ru'], true)) {
@@ -101,33 +88,21 @@ final class User
         $this->region = $region;
     }
 
-    /**
-     * @return int
-     */
     public function getId(): int
     {
         return $this->id;
     }
 
-    /**
-     * @return string
-     */
     public function getUserId(): string
     {
         return $this->userId;
     }
 
-    /**
-     * @return string
-     */
     public function getUsername(): string
     {
         return $this->username;
     }
 
-    /**
-     * @return string
-     */
     public function getRegion(): string
     {
         return $this->region;
