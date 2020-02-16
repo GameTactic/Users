@@ -4,11 +4,12 @@ declare(strict_types=1);
 
 /**
  *
- * Household 2020 — NOTICE OF LICENSE
- * This source file is released under commercial license by copyright holders.
+ * GameTactic Users 2020 — NOTICE OF LICENSE
  *
- * @copyright 2017-2020 (c) Niko Granö (https://granö.fi)
- * @copyright 2014-2020 (c) IronLions (https://ironlions.fi)
+ * This source file is released under GPLv3 license by copyright holders.
+ * Please see LICENSE file for more specific licensing terms.
+ * @copyright 2019-2020 (c) GameTactic
+ * @author Niko Granö <niko@granö.fi>
  *
  */
 
