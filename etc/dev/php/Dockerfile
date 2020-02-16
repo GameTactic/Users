@@ -1,10 +1,7 @@
 FROM php:7.4-fpm-alpine
 
-RUN apk add --no-cache libsodium-dev \
-    && docker-php-ext-install -j8 sodium opcache \
-    && apk del --purge libsodium-dev
-RUN docker-php-ext-install -j8 pdo_mysql bcmath sockets
-RUN apk add --no-cache $PHPIZE_DEPS \
+RUN apk add --no-cache $PHPIZE_DEPS libsodium-dev \
+	&& docker-php-ext-install -j8 pdo_mysql sockets sodium opcache \
     && pecl install xdebug redis \
     && docker-php-ext-enable xdebug redis \
     && apk del --purge $PHPIZE_DEPS
