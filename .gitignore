@@ -1,5 +1,4 @@
-/docker/db/data
-/helm/api/charts
+.idea
 
 ###> symfony/framework-bundle ###
 /.env.local

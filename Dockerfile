@@ -46,7 +46,7 @@ COPY --from=builder /app /app
 RUN chown www-data:www-data -R /app
 RUN sudo -E -u www-data bin/console assets:install --no-ansi -n public
 
-RUN curl -o /etc/nginx/conf.d/default.conf https://raw.githubusercontent.com/GameTactic/Deployment/master/artifact/nginx.conf
-RUN curl -o /etc/supervisord.conf https://raw.githubusercontent.com/GameTactic/Deployment/master/artifact/supervisord.conf
+RUN curl -oSs /etc/nginx/conf.d/default.conf https://raw.githubusercontent.com/GameTactic/Deployment/master/artifact/nginx.conf
+RUN curl -oSs /etc/supervisord.conf https://raw.githubusercontent.com/GameTactic/Deployment/master/artifact/supervisord.conf
 ENTRYPOINT ["/usr/bin/supervisord", "--nodaemon", "--configuration", "/etc/supervisord.conf"]
 EXPOSE 80/tcp

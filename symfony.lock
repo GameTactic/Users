@@ -122,6 +122,9 @@
     "jdorn/sql-formatter": {
         "version": "v1.2.17"
     },
+    "laminas/laminas-zendframework-bridge": {
+        "version": "1.0.1"
+    },
     "lcobucci/jwt": {
         "version": "3.3.1"
     },
@@ -164,6 +167,9 @@
     "ocramius/proxy-manager": {
         "version": "2.2.3"
     },
+    "php": {
+        "version": "7.4"
+    },
     "php-cs-fixer/diff": {
         "version": "v1.3.0"
     },
@@ -180,6 +186,9 @@
         "version": "1.0.1"
     },
     "psr/container": {
+        "version": "1.0.0"
+    },
+    "psr/event-dispatcher": {
         "version": "1.0.0"
     },
     "psr/link": {
@@ -213,9 +222,6 @@
             "config/bootstrap.php"
         ]
     },
-    "symfony/debug": {
-        "version": "v4.3.4"
-    },
     "symfony/dependency-injection": {
         "version": "v4.3.4"
     },
@@ -223,7 +229,10 @@
         "version": "v4.3.4"
     },
     "symfony/dotenv": {
-        "version": "v4.3.4"
+        "version": "v5.0.4"
+    },
+    "symfony/error-handler": {
+        "version": "v5.0.4"
     },
     "symfony/event-dispatcher": {
         "version": "v4.3.4"
@@ -449,6 +458,9 @@
     },
     "twig/twig": {
         "version": "v2.11.3"
+    },
+    "webimpress/safe-writer": {
+        "version": "2.0.0"
     },
     "webmozart/assert": {
         "version": "1.5.0"
