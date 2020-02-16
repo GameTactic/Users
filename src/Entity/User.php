@@ -32,7 +32,7 @@ use Symfony\Component\Serializer\Annotation\Groups;
  *     },
  * )
  */
-final class User
+class User
 {
     /**
      * @ORM\Id
